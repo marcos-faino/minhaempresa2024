@@ -25,7 +25,7 @@ class Cargo(models.Model):
 class Funcionario(Base):
     nome = models.CharField(max_length=200)
     bio = models.TextField()
-    foto = StdImageField(upload_to=,
+    foto = StdImageField(upload_to='equipe',
                          variations={'thumb':{'width':500,
                                               'height':500,
                                               'crop':True}})
