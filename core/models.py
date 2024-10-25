@@ -43,3 +43,18 @@ class Funcionario(Base):
 
     def __str__(self):
         return self.nome
+
+
+class Servico(Base):
+    titulo = models.CharField(max_length=50)
+    descricao = models.TextField(max_length=500)
+    imagem = StdImageField(upload_to='servicos', variations={'thumb':{'width':300,
+                                                                      'height':300,
+                                                                      'crop':True}})
+
+    class Meta:
+        verbose_name = 'Serviço'
+        verbose_name_plural = 'Serviços'
+
+    def __str__(self):
+        return self.titulo
