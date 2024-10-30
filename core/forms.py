@@ -20,7 +20,7 @@ class ContatoForm(forms.Form):
             subject=f'Contato de: {nome}',
             body=conteudo,
             from_email='contato@minhaempresa.com.br',
-            to=['contato@minhaempresa.com.br',],
-            headers={'Reply-To':email}
+            to=['contato@minhaempresa.com.br', ],
+            headers={'Reply-To': email}
         )
-        mail.send()
+        mail.send(4)

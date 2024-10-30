@@ -5,6 +5,15 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Fale Conosco</h2>
                     <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <div>
+                        {% if messages %}
+                            {% for m in messages %}
+                                <div class="alert alert-{{ m.tags }}">
+                                    {{ m }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
                 </div>
                 <!-- * * * * * * * * * * * * * * *-->
                 <!-- * * SB Forms Contact Form * *-->
